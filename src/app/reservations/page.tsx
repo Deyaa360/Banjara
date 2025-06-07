@@ -1,6 +1,7 @@
 import React from 'react';
 import PlaceholderImage from '@/components/ui/placeholder-image';
 import ReservationForm from '@/components/reservation/ReservationForm';
+import { getImagePath } from '@/lib/image-utils';
 
 export default function ReservationsPage() {
   return (
@@ -8,16 +9,21 @@ export default function ReservationsPage() {
       {/* Hero Section */}
       <div className="relative h-[50vh] min-h-[400px] bg-pepper-800 overflow-hidden">
         <div 
-          className="absolute inset-0 bg-[url('/images/reservation-hero-placeholder.jpg')] bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))" 
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${getImagePath("images/reservation-hero-placeholder.jpg")}')` 
           }}
         >
           <PlaceholderImage text="Reservation Header Image" height="100%" bgColor="#1F1C1A" textColor="#D4AF37" />
         </div>
         
         {/* Decorative pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/images/indian-pattern.png')] bg-repeat opacity-5"></div>
+        <div 
+          className="absolute inset-0 bg-repeat opacity-5"
+          style={{ 
+            backgroundImage: `url('${getImagePath("images/indian-pattern.png")}')` 
+          }}
+        ></div>
         
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center items-center text-center z-10">
           <div className="flex justify-center items-center mb-4">

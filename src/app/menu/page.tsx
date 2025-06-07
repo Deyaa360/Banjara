@@ -4,6 +4,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { Search, Filter, Leaf, Flame, Star, MapPin, X } from 'lucide-react';
+import { getImagePath } from '@/lib/image-utils';
 
 // Optimized menu data structure
 const menuData = {
@@ -18,7 +19,7 @@ const menuData = {
         isVegetarian: true,
         spiceLevel: 2,
         isSignature: true,
-        image: "/images/menu/MauryaJi Basket Chaat.png"
+        image: getImagePath("images/menu/MauryaJi Basket Chaat.png")
       },
       {
         id: 2,
@@ -28,7 +29,7 @@ const menuData = {
         price: 14,
         isVegetarian: true,
         spiceLevel: 2,
-        image: "/images/menu/GUPCHUP (ODISHA).png"
+        image: getImagePath("images/menu/GUPCHUP (ODISHA).png")
       },
       {
         id: 3,
@@ -38,7 +39,7 @@ const menuData = {
         price: 18,
         isVegetarian: true,
         spiceLevel: 1,
-        image: "/images/menu/BEET AND GOAT CHEESE CHOP (KOLKATA).png"
+        image: getImagePath("images/menu/BEET AND GOAT CHEESE CHOP (KOLKATA).png")
       },
       {
         id: 4,
@@ -48,7 +49,7 @@ const menuData = {
         price: 17,
         isVegetarian: true,
         spiceLevel: 2,
-        image: "/images/menu/DAHI KE KEBAB (LUCKNOW).png"
+        image: getImagePath("images/menu/DAHI KE KEBAB (LUCKNOW).png")
       }
     ],
     "Non-Vegetarian": [
@@ -60,7 +61,7 @@ const menuData = {
         price: 19,
         isVegetarian: false,
         spiceLevel: 3,
-        image: "/images/menu/JHOL MOMO (ARUNANCHAL PRADESH).png"
+        image: getImagePath("images/menu/JHOL MOMO (ARUNANCHAL PRADESH).png")
       },
       {
         id: 6,
@@ -70,7 +71,7 @@ const menuData = {
         price: 21,
         isVegetarian: false,
         spiceLevel: 3,
-        image: "/images/menu/GUNTUR CHILLI CHICKEN BAO (ARUNANCHAL PRADESH).png"
+        image: getImagePath("images/menu/GUNTUR CHILLI CHICKEN BAO (ARUNANCHAL PRADESH).png")
       },
       {
         id: 7,
@@ -81,7 +82,7 @@ const menuData = {
         isVegetarian: false,
         spiceLevel: 2,
         isSignature: true,
-        image: "/images/menu/GALAUTI KEBAB (LUCKNOW).png"
+        image: getImagePath("images/menu/GALAUTI KEBAB (LUCKNOW).png")
       },
       {
         id: 8,
@@ -91,7 +92,7 @@ const menuData = {
         price: 22,
         isVegetarian: false,
         spiceLevel: 2,
-        image: "/images/menu/ASLAM TIKKA (DELHI).png"
+        image: getImagePath("images/menu/ASLAM TIKKA (DELHI).png")
       },
       {
         id: 9,
@@ -102,7 +103,7 @@ const menuData = {
         isVegetarian: false,
         spiceLevel: 2,
         isSignature: true,
-        image: "/images/menu/LAMB CHOP (KASHMIR).jpg"
+        image: getImagePath("images/menu/LAMB CHOP (KASHMIR).jpg")
       },
 
     ]
@@ -118,7 +119,7 @@ const menuData = {
         isVegetarian: true,
         spiceLevel: 1,
         isSignature: true,
-        image: "/images/menu/BURATA HAAK (KASHMIR).png"
+        image: getImagePath("images/menu/BURATA HAAK (KASHMIR).png")
       },
       {
         id: 15,
@@ -128,7 +129,7 @@ const menuData = {
         price: 18,
         isVegetarian: true,
         spiceLevel: 2,
-        image: "/images/menu/LITTI CHOKHA (BIHAR).png"
+        image: getImagePath("images/menu/LITTI CHOKHA (BIHAR).png")
       },
       {
         id: 16,
@@ -138,7 +139,7 @@ const menuData = {
         price: 19,
         isVegetarian: true,
         spiceLevel: 1,
-        image: "/images/menu/DAL MAKHNI (DELHI).png"
+        image: getImagePath("images/menu/DAL MAKHNI (DELHI).png")
       },
       {
         id: 17,
@@ -148,7 +149,7 @@ const menuData = {
         price: 21,
         isVegetarian: true,
         spiceLevel: 1,
-        image: "/images/menu/PANEER PINWHEEL MAKHNI (PUNJAB).png"
+        image: getImagePath("images/menu/PANEER PINWHEEL MAKHNI (PUNJAB).png")
       }
     ],
     "Non-Vegetarian": [
@@ -161,7 +162,7 @@ const menuData = {
         isVegetarian: false,
         spiceLevel: 1,
         isSignature: true,
-        image: "/images/menu/BUTTER CHICKEN (PUNJAB).png"
+        image: getImagePath("images/menu/BUTTER CHICKEN (PUNJAB).png")
       },
       {
         id: 20,
@@ -171,7 +172,7 @@ const menuData = {
         price: 26,
         isVegetarian: false,
         spiceLevel: 2,
-        image: "/images/menu/GOAN FISH CURRY.png"
+        image: getImagePath("images/menu/GOAN FISH CURRY.png")
       },
       {
         id: 21,
@@ -182,7 +183,7 @@ const menuData = {
         isVegetarian: false,
         spiceLevel: 3,
         isSignature: true,
-        image: "/images/menu/LAAL MAAS (RAJHJASTHAN).png"
+        image: getImagePath("images/menu/LAAL MAAS (RAJHJASTHAN).png")
       },
       {
         id: 23,
@@ -193,7 +194,7 @@ const menuData = {
         isVegetarian: false,
         spiceLevel: 2,
         isSignature: true,
-        image: "/images/menu/NALLI BIRYANI (HYDERABAD).png"
+        image: getImagePath("images/menu/NALLI BIRYANI (HYDERABAD).png")
       }
     ]
   },
@@ -204,7 +205,7 @@ const menuData = {
       description: "Traditional garlic-infused bread",
       price: 6,
       isVegetarian: true,
-      image: "/images/menu/GARLIC NAAN.png"
+      image: getImagePath("images/menu/GARLIC NAAN.png")
     },
     {
       id: 25,
@@ -212,7 +213,7 @@ const menuData = {
       description: "Spiced red chilli naan",
       price: 7,
       isVegetarian: true,
-      image: "/images/menu/LAAL NAAN.png"
+      image: getImagePath("images/menu/LAAL NAAN.png")
     },
     {
       id: 26,
@@ -220,7 +221,7 @@ const menuData = {
       description: "Layered flaky bread",
       price: 6,
       isVegetarian: true,
-      image: "/images/menu/LACCHA PARATHA.png"
+      image: getImagePath("images/menu/LACCHA PARATHA.png")
     },
     {
       id: 27,
@@ -228,7 +229,7 @@ const menuData = {
       description: "Truffle and goat cheese stuffed bread",
       price: 12,
       isVegetarian: true,
-      image: "/images/menu/TRUFFLE GOAT CHEESE KULCHA.png"
+      image: getImagePath("images/menu/TRUFFLE GOAT CHEESE KULCHA.png")
     },
     {
       id: 28,
@@ -236,7 +237,7 @@ const menuData = {
       description: "Minced meat stuffed bread",
       price: 10,
       isVegetarian: false,
-      image: "/images/menu/KEEMA KULCHA.png"
+      image: getImagePath("images/menu/KEEMA KULCHA.png")
     }
   ],
   "Sides": [
@@ -246,7 +247,7 @@ const menuData = {
       description: "Arbi chips, nadrukhakhra sabudana, smoked tomato chutney, pineapple chutney, and walnut chutney",
       price: 8,
       isVegetarian: true,
-      image: "/images/menu/ASSORTED PAPAD.png"
+      image: getImagePath("images/menu/ASSORTED PAPAD.png")
     },
     {
       id: 30,
@@ -254,7 +255,7 @@ const menuData = {
       description: "Cumin-scented basmati rice",
       price: 7,
       isVegetarian: true,
-      image: "/images/menu/JEERA RICE.png"
+      image: getImagePath("images/menu/JEERA RICE.png")
     }
   ]
 };

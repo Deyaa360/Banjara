@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { getImagePath } from '@/lib/image-utils';
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
         <div className="text-center mb-16">
           <div className="relative h-16 w-48 mx-auto mb-4">
             <Image
-              src="/LOGO.png"
+              src={getImagePath("LOGO.png")}
               alt="Banjara Restaurant"
               fill
               className="object-contain"

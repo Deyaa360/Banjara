@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getImagePath } from '@/lib/image-utils';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,7 +45,7 @@ const Header = () => {
           <Link href="/" className="flex items-center group">
             <div className="relative h-12 w-32 lg:h-14 lg:w-36">
               <Image
-                src="/LOGO.png"
+                src={getImagePath("LOGO.png")}
                 alt="Banjara Restaurant"
                 fill
                 className="object-contain transition-all duration-300 group-hover:scale-105"
