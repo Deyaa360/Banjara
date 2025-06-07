@@ -1,0 +1,734 @@
+/* ===== BANJARA HERITAGE DESIGN SYSTEM ===== */
+/* Sophisticated, Elegant, and Consistent Styling Framework */
+/* Version 2.0 - Complete Design System Revamp */
+
+/* ===== HERITAGE LAYOUT SYSTEM ===== */
+.container-heritage {
+  @apply max-w-7xl mx-auto px-6 lg:px-8 xl:px-12;
+}
+
+.container-heritage-wide {
+  @apply max-w-screen-2xl mx-auto px-6 lg:px-8 xl:px-16;
+}
+
+.container-heritage-narrow {
+  @apply max-w-5xl mx-auto px-6 lg:px-8;
+}
+
+.section-heritage {
+  @apply py-section relative;
+}
+
+.section-heritage-sm {
+  @apply py-section-sm relative;
+}
+
+.section-heritage-lg {
+  @apply py-section-lg relative;
+}
+
+.section-heritage-xl {
+  @apply py-32 lg:py-40 relative;
+}
+
+/* ===== HERITAGE TYPOGRAPHY SYSTEM ===== */
+/* Elegant typography hierarchy with perfect spacing and contrast */
+
+.heading-display {
+  @apply font-display text-display-xl font-bold leading-tight tracking-tight text-heritage-brown-800;
+  text-shadow: 0 2px 4px rgba(121, 89, 57, 0.1);
+}
+
+.heading-primary {
+  @apply font-display text-display-lg font-bold leading-tight tracking-tight text-heritage-brown-800;
+  text-shadow: 0 1px 2px rgba(121, 89, 57, 0.08);
+}
+
+.heading-secondary {
+  @apply font-display text-display-md font-semibold leading-tight text-heritage-brown-700;
+}
+
+.heading-tertiary {
+  @apply font-display text-3xl font-semibold leading-tight text-heritage-brown-700;
+}
+
+.heading-quaternary {
+  @apply font-display text-2xl font-medium leading-snug text-heritage-brown-600;
+}
+
+.text-body-xl {
+  @apply font-body text-2xl leading-relaxed text-heritage-gray-700 font-light;
+}
+
+.text-body-large {
+  @apply font-body text-xl leading-relaxed text-heritage-gray-700;
+}
+
+.text-body {
+  @apply font-body text-lg leading-relaxed text-heritage-gray-600;
+}
+
+.text-body-small {
+  @apply font-body text-base leading-relaxed text-heritage-gray-600;
+}
+
+.text-caption {
+  @apply font-body text-sm leading-normal text-heritage-gray-500 tracking-wide;
+}
+
+.text-micro {
+  @apply font-body text-xs leading-normal text-heritage-gray-400 tracking-wider uppercase;
+}
+
+/* Enhanced accent text variations */
+.text-accent {
+  @apply bg-gradient-to-r from-heritage-gold-600 via-heritage-cream-500 to-heritage-gold-600 bg-clip-text text-transparent;
+}
+
+.text-accent-warm {
+  @apply bg-gradient-to-r from-heritage-cream-600 via-heritage-gold-400 to-heritage-cream-600 bg-clip-text text-transparent;
+}
+
+.text-heritage-gradient {
+  @apply bg-gradient-to-r from-heritage-brown-700 via-heritage-gold-500 to-heritage-brown-700 bg-clip-text text-transparent;
+}
+
+.text-heritage-elegant {
+  @apply bg-gradient-to-r from-heritage-brown-800 via-heritage-brown-600 to-heritage-brown-800 bg-clip-text text-transparent;
+}
+
+/* ===== HERITAGE CARD SYSTEM ===== */
+/* Sophisticated card components with elegant shadows and interactions */
+
+.card-heritage {
+  @apply bg-white rounded-3xl shadow-heritage border border-heritage-beige-200/50 overflow-hidden backdrop-blur-sm;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+}
+
+.card-heritage-elevated {
+  @apply bg-white rounded-3xl shadow-heritage-lg border border-heritage-beige-200/50 overflow-hidden hover:shadow-heritage-xl transition-heritage;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+}
+
+.card-heritage-luxury {
+  @apply bg-white rounded-3xl shadow-heritage-xl border border-heritage-gold-200/30 overflow-hidden;
+  background: linear-gradient(135deg, rgba(255,255,255,0.99) 0%, rgba(250,248,246,0.95) 100%);
+  box-shadow: 
+    0 25px 50px -12px rgba(121, 89, 57, 0.25),
+    0 0 0 1px rgba(197, 167, 125, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card-heritage-glass {
+  @apply rounded-3xl shadow-heritage-lg border border-white/20 overflow-hidden backdrop-blur-xl;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+.card-heritage-warm {
+  @apply bg-gradient-to-br from-heritage-gold-50 to-heritage-cream-50 rounded-3xl shadow-warm border border-heritage-gold-200/50 overflow-hidden;
+}
+
+.card-heritage-dark {
+  @apply bg-gradient-to-br from-heritage-brown-800 to-heritage-brown-900 rounded-3xl shadow-heritage-xl border border-heritage-brown-700/50 overflow-hidden text-white;
+}
+
+/* Card content spacing */
+.card-heritage-content {
+  @apply p-card;
+}
+
+.card-heritage-content-sm {
+  @apply p-card-sm;
+}
+
+.card-heritage-content-lg {
+  @apply p-card-lg;
+}
+
+.card-heritage-content-xl {
+  @apply p-12 lg:p-16;
+}
+
+/* ===== HERITAGE BUTTON SYSTEM ===== */
+/* Elegant button components with sophisticated interactions */
+
+.btn-heritage-primary {
+  @apply bg-gradient-to-r from-heritage-brown-600 to-heritage-brown-700 hover:from-heritage-brown-700 hover:to-heritage-brown-800 text-white px-8 py-4 rounded-2xl font-semibold shadow-heritage-lg hover:shadow-heritage-xl transition-heritage border-0 relative overflow-hidden;
+}
+
+.btn-heritage-primary::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] transition-transform duration-700;
+}
+
+.btn-heritage-primary:hover::before {
+  @apply translate-x-[100%];
+}
+
+.btn-heritage-secondary {
+  @apply bg-gradient-to-r from-heritage-gold-500 to-heritage-cream-500 hover:from-heritage-gold-600 hover:to-heritage-cream-600 text-heritage-brown-800 px-8 py-4 rounded-2xl font-semibold shadow-warm-lg hover:shadow-warm-xl transition-heritage border-0 relative overflow-hidden;
+}
+
+.btn-heritage-secondary::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] transition-transform duration-700;
+}
+
+.btn-heritage-secondary:hover::before {
+  @apply translate-x-[100%];
+}
+
+.btn-heritage-outline {
+  @apply bg-transparent hover:bg-heritage-brown-50 text-heritage-brown-700 hover:text-heritage-brown-800 px-8 py-4 rounded-2xl font-semibold border-2 border-heritage-brown-300 hover:border-heritage-brown-400 transition-heritage relative overflow-hidden;
+}
+
+.btn-heritage-outline::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-heritage-brown-50/0 via-heritage-brown-50/50 to-heritage-brown-50/0 translate-x-[-100%] transition-transform duration-500;
+}
+
+.btn-heritage-outline:hover::before {
+  @apply translate-x-[100%];
+}
+
+.btn-heritage-ghost {
+  @apply bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-2xl font-semibold border border-white/20 hover:border-white/30 transition-heritage relative overflow-hidden;
+}
+
+.btn-heritage-ghost::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 translate-x-[-100%] transition-transform duration-500;
+}
+
+.btn-heritage-ghost:hover::before {
+  @apply translate-x-[100%];
+}
+
+.btn-heritage-luxury {
+  @apply bg-gradient-to-r from-heritage-gold-600 via-heritage-cream-500 to-heritage-gold-600 hover:from-heritage-gold-700 hover:via-heritage-cream-600 hover:to-heritage-gold-700 text-white px-10 py-5 rounded-2xl font-semibold shadow-heritage-xl hover:shadow-2xl transition-heritage border-0 relative overflow-hidden;
+  background-size: 200% 100%;
+}
+
+.btn-heritage-luxury:hover {
+  background-position: right center;
+}
+
+.btn-heritage-minimal {
+  @apply bg-transparent hover:bg-heritage-beige-50 text-heritage-brown-600 hover:text-heritage-brown-700 px-6 py-3 rounded-xl font-medium transition-heritage;
+}
+
+/* Button sizes */
+.btn-heritage-sm {
+  @apply px-6 py-3 text-sm rounded-xl;
+}
+
+.btn-heritage-lg {
+  @apply px-10 py-5 text-xl rounded-2xl;
+}
+
+.btn-heritage-xl {
+  @apply px-12 py-6 text-2xl rounded-3xl;
+}
+
+/* ===== HERITAGE BACKGROUND SYSTEM ===== */
+/* Sophisticated background gradients and textures */
+
+.bg-heritage-light {
+  @apply bg-gradient-to-br from-white via-heritage-beige-50/30 to-heritage-gold-50/20;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(197, 167, 125, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(230, 192, 122, 0.03) 0%, transparent 50%);
+}
+
+.bg-heritage-warm {
+  @apply bg-gradient-to-br from-heritage-gold-50 via-heritage-cream-50 to-heritage-beige-50;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(197, 167, 125, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(230, 192, 122, 0.1) 0%, transparent 50%);
+}
+
+.bg-heritage-neutral {
+  @apply bg-gradient-to-br from-heritage-beige-50 via-white to-heritage-gray-50;
+}
+
+.bg-heritage-dark {
+  @apply bg-gradient-to-br from-heritage-brown-900 via-heritage-brown-800 to-heritage-gray-900;
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(197, 167, 125, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(121, 89, 57, 0.1) 0%, transparent 50%);
+}
+
+.bg-heritage-elegant {
+  @apply bg-gradient-to-br from-heritage-gray-900 via-heritage-brown-900 to-heritage-gray-900;
+  background-image: 
+    linear-gradient(45deg, rgba(121, 89, 57, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(121, 89, 57, 0.05) 25%, transparent 25%);
+  background-size: 60px 60px;
+}
+
+.bg-heritage-luxury {
+  background: linear-gradient(135deg, 
+    rgba(121, 89, 57, 0.95) 0%, 
+    rgba(74, 74, 74, 0.9) 50%, 
+    rgba(121, 89, 57, 0.95) 100%);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(197, 167, 125, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(230, 192, 122, 0.15) 0%, transparent 50%);
+}
+
+.bg-heritage-texture {
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(121, 89, 57, 0.02) 2px, rgba(121, 89, 57, 0.02) 4px),
+    repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(197, 167, 125, 0.02) 2px, rgba(197, 167, 125, 0.02) 4px);
+}
+
+/* ===== HERITAGE BADGE SYSTEM ===== */
+/* Elegant badges and status indicators */
+
+.badge-heritage {
+  @apply inline-flex items-center gap-3 px-6 py-3 bg-heritage-gold-50 backdrop-blur-sm rounded-full border border-heritage-gold-200/50 shadow-soft;
+}
+
+.badge-heritage-dark {
+  @apply inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm rounded-full border border-heritage-gold-400/20 shadow-heritage;
+}
+
+.badge-heritage-luxury {
+  @apply inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-heritage-gold-100 to-heritage-cream-100 backdrop-blur-sm rounded-full border border-heritage-gold-300/50 shadow-warm;
+}
+
+.badge-heritage-minimal {
+  @apply inline-flex items-center gap-2 px-4 py-2 bg-heritage-beige-100 rounded-full border border-heritage-beige-200;
+}
+
+.badge-heritage-outline {
+  @apply inline-flex items-center gap-3 px-6 py-3 bg-transparent rounded-full border-2 border-heritage-gold-300;
+}
+
+.badge-text {
+  @apply text-heritage-brown-700 text-sm font-medium tracking-wider uppercase;
+}
+
+.badge-text-dark {
+  @apply text-heritage-gold-300 text-sm font-medium tracking-wider uppercase;
+}
+
+.badge-text-luxury {
+  @apply text-heritage-brown-800 text-sm font-semibold tracking-wider uppercase;
+}
+
+.badge-text-minimal {
+  @apply text-heritage-brown-600 text-xs font-medium tracking-wide uppercase;
+}
+
+/* ===== HERITAGE ANIMATION UTILITIES ===== */
+.animate-heritage-fade-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-heritage-fade-scale {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-heritage-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-heritage-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 3s ease-in-out infinite;
+}
+
+/* ===== HERITAGE HOVER EFFECTS ===== */
+.hover-heritage-lift {
+  @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-heritage-xl;
+}
+
+.hover-heritage-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.hover-heritage-glow {
+  @apply transition-all duration-300 hover:shadow-warm-lg;
+}
+
+/* ===== HERITAGE GRADIENT OVERLAYS ===== */
+.overlay-heritage-dark {
+  @apply absolute inset-0 bg-gradient-to-br from-heritage-brown-900/90 via-heritage-brown-800/80 to-heritage-gray-900/90;
+}
+
+.overlay-heritage-warm {
+  @apply absolute inset-0 bg-gradient-to-br from-heritage-gold-900/20 via-heritage-cream-800/10 to-heritage-beige-900/20;
+}
+
+.overlay-heritage-radial {
+  @apply absolute inset-0 bg-gradient-radial from-heritage-gold-600/15 to-transparent;
+}
+
+/* ===== HERITAGE BORDER SYSTEM ===== */
+.border-heritage {
+  @apply border border-heritage-beige-200/50;
+}
+
+.border-heritage-warm {
+  @apply border border-heritage-gold-200/50;
+}
+
+.border-heritage-accent {
+  @apply border-2 border-heritage-gold-400;
+}
+
+/* ===== HERITAGE FOCUS STATES ===== */
+.focus-heritage {
+  @apply focus:outline-none focus:ring-2 focus:ring-heritage-gold-400 focus:ring-offset-2 focus:ring-offset-white;
+}
+
+.focus-heritage-dark {
+  @apply focus:outline-none focus:ring-2 focus:ring-heritage-gold-400 focus:ring-offset-2 focus:ring-offset-heritage-brown-900;
+}
+
+/* ===== HERITAGE RESPONSIVE UTILITIES ===== */
+@media (max-width: 768px) {
+  .container-heritage {
+    @apply px-4;
+  }
+  
+  .section-heritage {
+    @apply py-16;
+  }
+  
+  .card-heritage-content {
+    @apply p-6;
+  }
+  
+  .heading-display {
+    @apply text-5xl;
+  }
+  
+  .heading-primary {
+    @apply text-4xl;
+  }
+}
+
+/* ===== HERITAGE LOADING STATES ===== */
+.loading-heritage {
+  @apply animate-pulse bg-heritage-beige-200;
+}
+
+.skeleton-heritage {
+  @apply bg-gradient-to-r from-heritage-beige-200 via-heritage-beige-100 to-heritage-beige-200 bg-[length:200%_100%] animate-shimmer;
+}
+
+/* ===== HERITAGE FORM ELEMENTS ===== */
+.input-heritage {
+  @apply w-full px-6 py-4 text-lg border-2 border-heritage-beige-200 rounded-xl focus:border-heritage-gold-400 focus:ring-0 transition-colors duration-300 bg-white;
+}
+
+.textarea-heritage {
+  @apply w-full px-6 py-4 text-lg border-2 border-heritage-beige-200 rounded-xl focus:border-heritage-gold-400 focus:ring-0 transition-colors duration-300 resize-none bg-white;
+}
+
+/* ===== HERITAGE ICON CONTAINERS ===== */
+.icon-heritage {
+  @apply w-16 h-16 bg-gradient-to-br from-heritage-gold-100 to-heritage-cream-100 rounded-2xl flex items-center justify-center;
+}
+
+.icon-heritage-inner {
+  @apply w-12 h-12 bg-gradient-to-br from-heritage-gold-500 to-heritage-cream-500 rounded-xl flex items-center justify-center shadow-lg;
+}
+
+.icon-heritage-large {
+  @apply w-20 h-20 bg-gradient-to-br from-heritage-gold-100 to-heritage-cream-100 rounded-2xl flex items-center justify-center;
+}
+
+.icon-heritage-large-inner {
+  @apply w-16 h-16 bg-gradient-to-br from-heritage-gold-500 to-heritage-cream-500 rounded-xl flex items-center justify-center shadow-lg;
+}
+
+/* ===== HERITAGE DIVIDERS ===== */
+.divider-heritage {
+  @apply w-full h-px bg-gradient-to-r from-transparent via-heritage-beige-300 to-transparent;
+}
+
+.divider-heritage-vertical {
+  @apply w-px h-6 bg-heritage-beige-400;
+}
+
+/* ===== HERITAGE GLASS EFFECTS ===== */
+.glass-heritage {
+  @apply bg-white/90 backdrop-blur-xl border border-white/20;
+}
+
+.glass-heritage-dark {
+  @apply bg-heritage-brown-900/90 backdrop-blur-xl border border-heritage-brown-700/30;
+}
+
+/* ===== HERITAGE UTILITY CLASSES ===== */
+.text-heritage-gradient {
+  @apply bg-gradient-to-r from-heritage-brown-600 via-heritage-gold-500 to-heritage-brown-600 bg-clip-text text-transparent;
+}
+
+.shadow-heritage-inset {
+  @apply shadow-[inset_0_2px_4px_rgba(121,89,57,0.1)];
+}
+
+.transition-heritage {
+  @apply transition-all duration-500;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-heritage-fast {
+  @apply transition-all duration-300;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transition-heritage-slow {
+  @apply transition-all duration-700;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== HERITAGE ANIMATION SYSTEM ===== */
+/* Smooth and elegant animations with perfect timing */
+
+.animate-heritage-fade-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-heritage-fade-scale {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-heritage-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-heritage-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* ===== ENHANCED HOVER EFFECTS ===== */
+/* Sophisticated interaction states */
+
+.hover-heritage-rotate {
+  @apply transition-heritage hover:rotate-3;
+}
+
+.hover-heritage-tilt {
+  @apply transition-heritage hover:-rotate-1 hover:scale-105;
+}
+
+/* ===== ENHANCED GRADIENT OVERLAYS ===== */
+/* Beautiful overlay systems for backgrounds */
+
+.overlay-heritage-elegant {
+  @apply absolute inset-0;
+  background: linear-gradient(135deg, 
+    rgba(121, 89, 57, 0.9) 0%, 
+    rgba(74, 74, 74, 0.8) 50%, 
+    rgba(121, 89, 57, 0.9) 100%);
+}
+
+.overlay-heritage-luxury {
+  @apply absolute inset-0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(197, 167, 125, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(230, 192, 122, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(121, 89, 57, 0.85) 0%, rgba(74, 74, 74, 0.75) 100%);
+}
+
+/* ===== ENHANCED BORDER SYSTEM ===== */
+/* Elegant border utilities */
+
+.border-heritage-elegant {
+  @apply border border-heritage-brown-200/30;
+}
+
+.border-heritage-luxury {
+  border: 1px solid;
+  border-image: linear-gradient(45deg, rgba(197, 167, 125, 0.3), rgba(230, 192, 122, 0.5), rgba(197, 167, 125, 0.3)) 1;
+}
+
+/* ===== ENHANCED FOCUS STATES ===== */
+/* Accessible and beautiful focus indicators */
+
+.focus-heritage-inset {
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-heritage-gold-400 transition-heritage;
+}
+
+/* ===== ENHANCED FORM ELEMENTS ===== */
+/* Beautiful and consistent form styling */
+
+.input-heritage:focus {
+  box-shadow: 
+    0 1px 3px rgba(121, 89, 57, 0.05),
+    0 0 0 3px rgba(197, 167, 125, 0.1);
+}
+
+.textarea-heritage:focus {
+  box-shadow: 
+    0 1px 3px rgba(121, 89, 57, 0.05),
+    0 0 0 3px rgba(197, 167, 125, 0.1);
+}
+
+.select-heritage {
+  @apply w-full px-6 py-4 text-lg border-2 border-heritage-beige-200 rounded-xl focus:border-heritage-gold-400 focus:ring-0 transition-heritage bg-white;
+  box-shadow: 0 1px 3px rgba(121, 89, 57, 0.05);
+}
+
+/* ===== ENHANCED ICON CONTAINERS ===== */
+/* Sophisticated icon presentation */
+
+.icon-heritage-minimal {
+  @apply w-12 h-12 bg-heritage-beige-100 rounded-xl flex items-center justify-center;
+}
+
+.icon-heritage-luxury {
+  @apply w-24 h-24 rounded-3xl flex items-center justify-center shadow-heritage-xl;
+  background: linear-gradient(135deg, rgba(197, 167, 125, 0.2) 0%, rgba(230, 192, 122, 0.3) 100%);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== ENHANCED DIVIDERS ===== */
+/* Elegant section separators */
+
+.divider-heritage-thick {
+  @apply w-full h-0.5 bg-gradient-to-r from-transparent via-heritage-gold-300 to-transparent;
+}
+
+.divider-heritage-ornate {
+  @apply w-full h-px relative;
+  background: linear-gradient(to right, transparent, rgba(197, 167, 125, 0.5), transparent);
+}
+
+.divider-heritage-ornate::before {
+  content: '';
+  @apply absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-heritage-gold-400 rounded-full;
+}
+
+/* ===== ENHANCED GLASS EFFECTS ===== */
+/* Modern glassmorphism with heritage colors */
+
+.glass-heritage-warm {
+  @apply backdrop-blur-xl border border-heritage-gold-300/30;
+  background: linear-gradient(135deg, rgba(197, 167, 125, 0.1) 0%, rgba(230, 192, 122, 0.05) 100%);
+}
+
+/* ===== ENHANCED LOADING STATES ===== */
+/* Elegant loading and skeleton states */
+
+.skeleton-heritage-text {
+  @apply h-4 bg-gradient-to-r from-heritage-beige-200 via-heritage-beige-100 to-heritage-beige-200 bg-[length:200%_100%] animate-shimmer rounded;
+}
+
+.skeleton-heritage-avatar {
+  @apply w-12 h-12 bg-gradient-to-r from-heritage-beige-200 via-heritage-beige-100 to-heritage-beige-200 bg-[length:200%_100%] animate-shimmer rounded-full;
+}
+
+/* ===== ENHANCED UTILITY CLASSES ===== */
+/* Additional utility classes for consistency */
+
+.shadow-heritage-glow {
+  box-shadow: 0 0 20px rgba(197, 167, 125, 0.3);
+}
+
+/* ===== ENHANCED RESPONSIVE UTILITIES ===== */
+/* Mobile-first responsive design */
+
+@media (max-width: 480px) {
+  .container-heritage {
+    @apply px-3;
+  }
+  
+  .section-heritage {
+    @apply py-12;
+  }
+  
+  .card-heritage-content {
+    @apply p-4;
+  }
+  
+  .heading-display {
+    @apply text-4xl;
+  }
+  
+  .heading-primary {
+    @apply text-3xl;
+  }
+}
+
+/* ===== HERITAGE PRINT STYLES ===== */
+/* Elegant print styling */
+
+@media print {
+  .bg-heritage-light,
+  .bg-heritage-warm,
+  .bg-heritage-dark,
+  .bg-heritage-elegant {
+    background: white !important;
+  }
+  
+  .text-accent,
+  .text-heritage-gradient {
+    color: #795939 !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+  
+  .shadow-heritage,
+  .shadow-heritage-lg,
+  .shadow-heritage-xl {
+    box-shadow: none !important;
+  }
+}
+
+/* ===== HERITAGE ACCESSIBILITY ===== */
+/* Enhanced accessibility features */
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-heritage,
+  .transition-heritage-fast,
+  .transition-heritage-slow,
+  .hover-heritage-lift,
+  .hover-heritage-scale,
+  .animate-heritage-fade-up,
+  .animate-heritage-fade-scale,
+  .animate-heritage-float,
+  .animate-pulse-soft {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .border-heritage,
+  .border-heritage-warm {
+    border-color: #795939 !important;
+  }
+  
+  .text-heritage-gray-500,
+  .text-heritage-gray-600 {
+    color: #4a4a4a !important;
+  }
+}
+
+/* ===== HERITAGE DARK MODE SUPPORT ===== */
+/* Future-ready dark mode utilities */
+
+@media (prefers-color-scheme: dark) {
+  .card-heritage {
+    background: linear-gradient(135deg, rgba(121, 89, 57, 0.1) 0%, rgba(74, 74, 74, 0.05) 100%);
+    border-color: rgba(197, 167, 125, 0.2);
+  }
+  
+  .bg-heritage-light {
+    background: linear-gradient(to bottom right, rgba(121, 89, 57, 0.05), rgba(74, 74, 74, 0.02));
+  }
+}
