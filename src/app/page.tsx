@@ -360,6 +360,131 @@ export default function Home() {
       {/* Featured Dishes Carousel Section */}
       <FeaturedDishesCarousel />
 
+      {/* Heritage Story Section */}
+      <section className="py-20 lg:py-32 bg-stone-950 overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="inline-flex items-center gap-4 mb-8 lg:mb-12">
+                <div className="h-px w-16 lg:w-24 bg-gradient-to-r from-transparent to-amber-400" />
+                <span className="text-amber-400 text-sm font-medium tracking-[0.3em] uppercase">
+                  Our Heritage
+                </span>
+                <div className="h-px w-16 lg:w-24 bg-gradient-to-l from-transparent to-amber-400" />
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 leading-tight tracking-tight" style={{ color: '#c4b597' }}>
+                Where Ancient
+                <br />
+                <span style={{ color: '#e6c07a' }} className="font-light tracking-wide">
+                  Recipes Live
+                </span>
+              </h2>
+              
+              <div className="space-y-6 text-lg lg:text-xl text-stone-300 leading-relaxed">
+                <p>
+                  In the bustling streets of India, where spices dance in the air and every meal tells a story, 
+                  Banjara was born from a passion to preserve the authentic flavors that have been passed down 
+                  through generations.
+                </p>
+                <p>
+                  Our kitchen is a sanctuary where traditional techniques meet contemporary presentation, 
+                  creating an experience that honors the past while embracing the future of Indian cuisine.
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="mt-10"
+              >
+                <Link href="/about">
+                  <button 
+                    className="group px-8 py-4 font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl border border-amber-600/30"
+                    style={{
+                      backgroundColor: '#795939',
+                      color: '#c4b597',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = '#e6c07a';
+                      e.currentTarget.style.color = '#795939';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = '#795939';
+                      e.currentTarget.style.color = '#c4b597';
+                    }}
+                  >
+                    <div className="flex items-center gap-3">
+                      <span>Discover Our Story</span>
+                      <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
+                  </button>
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* Right Visual Elements */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              {/* Heritage Image with Elegant Shapes */}
+              <div className="relative">
+                {/* Decorative Background Shapes */}
+                <div className="absolute -inset-8">
+                  {/* Large Golden Circle */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-400/15 to-amber-600/5 rounded-full blur-2xl"></div>
+                  
+                  {/* Medium Accent Circle */}
+                  <div className="absolute bottom-8 left-0 w-24 h-24 bg-gradient-to-tr from-amber-500/20 to-transparent rounded-full blur-xl"></div>
+                  
+                  {/* Small Floating Elements */}
+                  <div className="absolute top-1/4 -left-4 w-16 h-16 bg-gradient-to-br from-amber-300/10 to-transparent rounded-full blur-lg"></div>
+                  <div className="absolute bottom-1/4 -right-6 w-20 h-20 bg-gradient-to-bl from-amber-400/8 to-transparent rounded-full blur-xl"></div>
+                </div>
+
+                {/* Geometric Frame Elements */}
+                <div className="absolute -inset-4 border border-amber-600/20 rounded-[2rem] transform rotate-1"></div>
+                <div className="absolute -inset-2 border border-amber-500/10 rounded-[1.5rem] transform -rotate-1"></div>
+
+                {/* Main Image Container */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <div 
+                    className="aspect-[4/5] bg-cover bg-center bg-no-repeat transform hover:scale-105 transition-transform duration-700"
+                    style={{ 
+                      backgroundImage: `url(${getImagePath('heritage.png')})`,
+                    }}
+                  >
+                    {/* Subtle Image Overlay for Depth */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-stone-900/10"></div>
+                    
+                    {/* Corner Accent Elements */}
+                    <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-amber-400/40 rounded-tl-lg"></div>
+                    <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-amber-400/40 rounded-br-lg"></div>
+                  </div>
+                </div>
+
+                {/* Floating Decorative Lines */}
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-amber-400/60 to-transparent"></div>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent"></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

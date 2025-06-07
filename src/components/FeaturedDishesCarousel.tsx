@@ -57,7 +57,7 @@ const FeaturedDishesCarousel = () => {
           <Flame 
             key={i} 
             size={12} 
-            className={`${i < level ? 'text-red-500 fill-current' : 'text-stone-300'}`} 
+            className={`${i < level ? 'text-amber-400 fill-current' : 'text-stone-400/50'}`} 
           />
         ))}
       </div>
@@ -92,6 +92,22 @@ const FeaturedDishesCarousel = () => {
           onMouseEnter={() => setIsAutoPlaying(false)}
           onMouseLeave={() => setIsAutoPlaying(true)}
         >
+          {/* Elegant Decorative Shapes */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Large Golden Circles */}
+            <div className="absolute top-10 left-10 w-40 h-40 bg-gradient-to-br from-amber-400/12 to-amber-600/4 rounded-full" style={{ filter: 'blur(150px)' }}></div>
+            <div className="absolute top-1/3 right-16 w-32 h-32 bg-gradient-to-bl from-amber-500/15 to-transparent rounded-full" style={{ filter: 'blur(120px)' }}></div>
+            <div className="absolute bottom-20 left-1/4 w-36 h-36 bg-gradient-to-tr from-amber-400/10 to-amber-600/3 rounded-full" style={{ filter: 'blur(140px)' }}></div>
+            <div className="absolute bottom-10 right-10 w-28 h-28 bg-gradient-to-tl from-amber-300/12 to-transparent rounded-full" style={{ filter: 'blur(130px)' }}></div>
+            
+            {/* Small Floating Elements */}
+            <div className="absolute top-1/4 left-1/3 w-20 h-20 bg-gradient-to-br from-amber-300/8 to-transparent rounded-full" style={{ filter: 'blur(100px)' }}></div>
+            <div className="absolute top-2/3 right-1/4 w-16 h-16 bg-gradient-to-bl from-amber-400/10 to-transparent rounded-full" style={{ filter: 'blur(90px)' }}></div>
+            <div className="absolute top-1/2 left-16 w-24 h-24 bg-gradient-to-tr from-amber-500/6 to-transparent rounded-full" style={{ filter: 'blur(110px)' }}></div>
+            <div className="absolute bottom-1/3 right-1/3 w-18 h-18 bg-gradient-to-tl from-amber-400/8 to-transparent rounded-full" style={{ filter: 'blur(80px)' }}></div>
+            <div className="absolute top-16 right-1/2 w-14 h-14 bg-gradient-to-br from-amber-300/9 to-transparent rounded-full" style={{ filter: 'blur(70px)' }}></div>
+            <div className="absolute bottom-1/4 left-1/2 w-22 h-22 bg-gradient-to-bl from-amber-500/7 to-transparent rounded-full" style={{ filter: 'blur(100px)' }}></div>
+          </div>
           {/* Main Carousel */}
           <div className="relative h-[80vh] flex items-center justify-center w-full">
             <AnimatePresence mode="wait">
@@ -125,7 +141,13 @@ const FeaturedDishesCarousel = () => {
                     filter: position !== 0 ? 'blur(2px)' : 'none',
                   }}
                 >
-                  <Card className={`${position === 0 ? 'w-[90vw] max-w-[800px] h-[70vh]' : 'w-[400px] h-[500px]'} relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 border-0 group`}>
+                  <Card className={`${position === 0 ? 'w-[90vw] max-w-[800px] h-[70vh]' : 'w-[400px] h-[500px]'} relative overflow-hidden shadow-2xl transition-all duration-700 border-0 group`}
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.05) 50%, rgba(0,0,0,0.1) 100%)',
+                      backdropFilter: 'blur(10px)',
+                      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)',
+                    }}
+                  >
                     {/* Full Background Image */}
                     <div className="absolute inset-0">
                       <Image
@@ -142,18 +164,37 @@ const FeaturedDishesCarousel = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30" />
                     
-                    {/* Badges */}
-                    <div className="absolute top-6 left-6 flex flex-col gap-2 z-10">
+                    {/* Subtle Shine Effect - Only for Center Card */}
+                    {position === 0 && (
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        <div 
+                          className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"
+                          style={{
+                            background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+                          }}
+                        />
+                      </div>
+                    )}
+                    
+                    {/* Card Border Glow - Only for Center Card */}
+                    {position === 0 && (
+                      <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        style={{
+                          boxShadow: 'inset 0 0 20px rgba(230, 192, 122, 0.1), 0 0 20px rgba(230, 192, 122, 0.05)',
+                        }}
+                      />
+                    )}
+                    
+                    {/* Elegant Corner Indicators */}
+                    <div className="absolute top-6 right-6 flex flex-col gap-2 z-10">
                       {dish.isVegetarian && (
-                        <div className="bg-green-600/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-lg">
-                          <Leaf className="w-3 h-3" />
-                          Vegetarian
+                        <div className="w-8 h-8 bg-stone-900/60 backdrop-blur-md border border-green-400/30 rounded-full flex items-center justify-center shadow-lg">
+                          <Leaf className="w-4 h-4 text-green-400/80" />
                         </div>
                       )}
                       {dish.isSignature && (
-                        <div className="bg-amber-600/90 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 shadow-lg">
-                          <Star className="w-3 h-3" />
-                          Chef's Special
+                        <div className="w-8 h-8 bg-stone-900/60 backdrop-blur-md border border-amber-400/30 rounded-full flex items-center justify-center shadow-lg">
+                          <Star className="w-4 h-4 text-amber-400/80" />
                         </div>
                       )}
                     </div>
@@ -189,8 +230,8 @@ const FeaturedDishesCarousel = () => {
                         
                         {position === 0 && (
                           <Link href="/menu">
-                            <button className="group/btn flex items-center gap-2 bg-amber-600/90 hover:bg-amber-500 backdrop-blur-md text-white px-4 py-2 rounded-full font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg">
-                              View Menu
+                            <button className="group/btn flex items-center gap-2 bg-stone-900/40 hover:bg-stone-800/60 backdrop-blur-md border border-amber-400/20 hover:border-amber-400/40 text-amber-200 hover:text-amber-100 px-5 py-2.5 rounded-full font-medium text-sm transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
+                              <span className="tracking-wide">View Menu</span>
                               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                             </button>
                           </Link>
