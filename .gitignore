@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+# GitHub Pages deployment
+/docs/
+
 # production
 /build
 

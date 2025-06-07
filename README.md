@@ -1,18 +1,24 @@
-# SpiceFusion Restaurant Website
+# 🍛 Banjara Restaurant Website
 
-A modern, elegant website for SpiceFusion, a premium North Indian restaurant, built with Next.js, React, TypeScript, and Tailwind CSS.
+A modern, elegant website for Banjara, a premium Indian restaurant showcasing authentic regional cuisine from across India. Built with Next.js, React, TypeScript, and Tailwind CSS.
 
-![SpiceFusion Website](public/images/website-preview.jpg)
+![Banjara Restaurant](public/heritage.png)
+
+## 🌟 Live Demo
+
+Visit the live website: [https://deyaa360.github.io/Banjara](https://deyaa360.github.io/Banjara)
 
 ## 🚀 Features
 
 - **Responsive Design**: Optimized for all device sizes
-- **Elegant UI**: Sophisticated gold and black theme
-- **Online Reservations**: Table booking functionality
-- **Interactive Menu**: Categorized menu with dietary indicators
-- **Contact Form**: Customer inquiry submission
-- **About Page**: Restaurant story and team information
+- **Heritage Theme**: Sophisticated gold and black design inspired by Indian culture
+- **Online Reservations**: Table booking functionality with date/time selection
+- **Regional Menu**: Authentic dishes from different Indian states
+- **Contact Form**: Customer inquiry submission with validation
+- **About Page**: Restaurant story and heritage information
 - **Accessibility**: WCAG compliant components
+- **Smooth Animations**: Framer Motion powered interactions
+- **Modern UI**: Built with shadcn/ui components
 
 ## 🛠️ Tech Stack
 
@@ -21,9 +27,11 @@ A modern, elegant website for SpiceFusion, a premium North Indian restaurant, bu
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Icons**: [Lucide Icons](https://lucide.dev/)
-- **Form Handling**: React Hook Form
+- **Form Handling**: React Hook Form with validation
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Date Picker**: React Day Picker
 - **Linting**: ESLint
-- **Formatting**: Prettier
+- **Deployment**: GitHub Pages
 
 ## 📋 Prerequisites
 
@@ -36,8 +44,8 @@ A modern, elegant website for SpiceFusion, a premium North Indian restaurant, bu
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/spice-fusion.git
-   cd spice-fusion
+   git clone https://github.com/Deyaa360/Banjara.git
+   cd Banjara
    ```
 
 2. Install dependencies:
@@ -59,15 +67,25 @@ A modern, elegant website for SpiceFusion, a premium North Indian restaurant, bu
 ## 📁 Project Structure
 
 ```
-spice-fusion/
-├── public/               # Static assets
+Banjara/
+├── public/               # Static assets (images, logos)
+│   └── images/          # Menu and food images
 ├── src/
 │   ├── app/              # Next.js app router pages
+│   │   ├── about/       # About page
+│   │   ├── contact/     # Contact page
+│   │   ├── menu/        # Menu page
+│   │   └── reservations/ # Reservations page
 │   ├── components/       # Reusable components
-│   │   ├── reservation/  # Reservation components
-│   │   └── ui/           # UI components
+│   │   ├── contact/     # Contact form components
+│   │   ├── layout/      # Header and Footer
+│   │   ├── reservation/ # Reservation components
+│   │   └── ui/          # shadcn/ui components
 │   ├── lib/              # Utility functions
-│   └── styles/           # Global styles
+│   ├── styles/           # Global styles and design system
+│   └── theme/            # Color definitions
+├── .gitignore            # Git ignore rules
+├── next.config.js        # Next.js configuration
 ├── tailwind.config.js    # Tailwind configuration
 └── tsconfig.json         # TypeScript configuration
 ```
@@ -173,20 +191,50 @@ module.exports = {
 
 ## 🚢 Deployment
 
-The website is configured for deployment on Vercel:
+### GitHub Pages
 
-1. Push your code to a GitHub repository
-2. Import the repository in Vercel
-3. Configure environment variables
-4. Deploy
+The website is configured for deployment on GitHub Pages:
+
+1. **Automatic Deployment**: Every push to the `main` branch triggers a GitHub Actions workflow
+2. **Static Export**: Next.js is configured to export static files
+3. **Custom Domain**: Can be configured in repository settings
+4. **HTTPS**: Automatically enabled
+
+### Manual Deployment
+
+To deploy manually:
+
+```bash
+npm run build
+npm run export
+```
+
+### Alternative Deployment (Vercel)
+
+For Vercel deployment:
+
+1. Import the repository in Vercel
+2. Configure environment variables
+3. Deploy automatically
 
 ## 📚 Additional Documentation
 
 For more detailed information about the project, refer to:
 
-- [PROJECT_DOCUMENTATION.md](./PROJECT_DOCUMENTATION.md) - Comprehensive project documentation
-- [CONTRIBUTING.md](./CONTRIBUTING.md) - Guidelines for contributing to the project
-- [CHANGELOG.md](./CHANGELOG.md) - History of changes and version updates
+- [TECHNICAL_SPECIFICATION.md](./TECHNICAL_SPECIFICATION.md) - Technical specifications and architecture
+- [STYLE_GUIDE.md](./STYLE_GUIDE.md) - Design system and styling guidelines
+
+## 🍽️ Menu Highlights
+
+The website showcases authentic regional dishes from across India:
+
+- **Delhi**: Aslam Tikka, Dal Makhni
+- **Punjab**: Butter Chicken, Chicken Zafrani Tikka
+- **Kashmir**: Burata Haak, Lamb Chop
+- **Lucknow**: Galauti Kebab, Dahi Ke Kebab
+- **Hyderabad**: Doori Kebab, Nalli Biryani
+- **Kerala**: Koonthal Pepper Fry
+- **And many more regional specialties...**
 
 ## 📄 License
 

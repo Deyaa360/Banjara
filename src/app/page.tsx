@@ -50,7 +50,7 @@ export default function Home() {
   }, [currentSlide, transitionPhase, bannerImages.length]);
 
   // Simple transition orchestrator
-  const initiateTransition = (targetSlide) => {
+  const initiateTransition = (targetSlide: number) => {
     if (transitionPhase === 'idle' && targetSlide !== currentSlide) {
       setTargetSlideIndex(targetSlide);
       
