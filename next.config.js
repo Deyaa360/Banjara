@@ -3,11 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   
-  // GitHub Pages configuration
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: 'out',
+  // GitHub Pages configuration - only for production builds
+  ...(process.env.NODE_ENV === 'production' && {
+    output: 'export',
+    trailingSlash: true,
+    skipTrailingSlashRedirect: true,
+    distDir: 'out',
+  }),
   
   // GitHub Pages uses a subdirectory
   basePath: process.env.NODE_ENV === 'production' ? '/Banjara' : '',

@@ -10,6 +10,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { getImagePath } from '@/lib/image-utils';
+import FeaturedDishesCarousel from '@/components/FeaturedDishesCarousel';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -356,6 +357,8 @@ export default function Home() {
 
       </section>
 
+      {/* Featured Dishes Carousel Section */}
+      <FeaturedDishesCarousel />
 
     </div>
   );
