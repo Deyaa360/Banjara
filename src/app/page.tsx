@@ -9,6 +9,7 @@ import {
   Calendar, 
   ArrowRight
 } from 'lucide-react';
+import { getImagePath } from '@/lib/image-utils';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,19 +18,19 @@ export default function Home() {
 
   const bannerImages = [
     {
-      src: '/banner1.png',
+      src: getImagePath('banner1.png'),
       title: 'Where Heritage Meets Flavor',
       subtitle: 'Embark on a culinary journey through the royal kitchens of India, where every spice tells a story and every dish is a masterpiece crafted with generations of wisdom.',
       accent: 'Heritage'
     },
     {
-      src: '/banner2.png', 
+      src: getImagePath('banner2.png'), 
       title: 'Artistry in Every Bite',
       subtitle: 'Our master chefs transform the finest ingredients into symphonies of taste, creating an extraordinary dining experience that awakens all your senses.',
       accent: 'Artistry'
     },
     {
-      src: '/banner3.png',
+      src: getImagePath('banner3.png'),
       title: 'Moments Worth Savoring',
       subtitle: 'Step into an atmosphere of warmth and elegance, where exceptional cuisine meets heartfelt hospitality to create memories that last a lifetime.',
       accent: 'Moments'
